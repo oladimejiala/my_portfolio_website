@@ -1,0 +1,200 @@
+/* For screens wider than 768px (desktop screens) */
+
+@media (min-width: 501px){
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: none;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #160202;
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger .menu {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 1;
+  background: #1b0202;
+  opacity: 0.7;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 40;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburger .menu li {
+    padding: 10;
+    margin: 10px;
+}
+
+.hamburger .menu li a {
+  display: block;
+  padding: 10px;
+  color: #faf5f5;
+  text-decoration: none;
+  width:max-content;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+.hamburger.active .menu {
+  display: block;
+}
+
+.hamburger:hover::after {
+  content: "menu";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #03131d; /* Twitter blue */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+}
+
+/* ****************************************************************************************** */
+/* For screens smaller than 500px (mobile and tablet screens) */
+@media (max-width: 500px) {
+  .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* body {
+    max-width: 600;
+  } */
+}
+
+.hamburger {
+  display: block;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #160202;
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger .menu {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  z-index: 1;
+  background: #1b0202;
+  opacity: 0.7;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 40;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburger .menu li {
+    padding: 10;
+    margin: 10px;
+}
+
+.hamburger .menu li a {
+  display: block;
+  padding: 10px;
+  color: #faf5f5;
+  text-decoration: none;
+  width:max-content;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+.hamburger.active .menu {
+  display: block;
+}
+
+.hamburger:hover::after {
+  content: "menu";
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #03131d; /* Twitter blue */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
